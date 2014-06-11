@@ -1,0 +1,7 @@
+cssselect==0.8
+gevent==0.13.8
+greenlet==0.4.1
+lxml==3.2.3
+mechanize==0.2.5
+pymongo==2.6.2
+pyquery==1.2.4

@@ -1,0 +1,32 @@
+enbot
+---------
+
+enbot is a IRC bot works in channel #gss_china, grab report from SFDC, broadcast the new cases in the channel.
+
+The code of the bot is forked from github, maxcountryman/kaa, but the author has removed the orginal code. You can't find the code from the author's repo now.
+
+Dependencies:
+-------------
+
+1. Install the packages in `rpmdeps.txt`
+
+2. Install MongoDB
+
+3. 
+
+# easy_install pip
+
+4. 
+
+# pip install < requrements.txt
+
+Usage:
+------
+
+1. Start backend at first
+
+# python backend.py
+
+2. Start the bot
+
+# python runner.py

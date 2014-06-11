@@ -1,0 +1,6 @@
+python-devel
+libevent-devel
+libevent-headers
+libevent-doc
+libxslt
+libxslt-devel
