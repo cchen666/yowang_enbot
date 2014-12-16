@@ -228,9 +228,9 @@ def report_parser(html_source):
                 {'nno': True},
     ]
     }
-    print current_case_list
+    #print current_case_list
     prev_case_list = map(lambda x: x.get('_id'), list(p.find(query_str, {'_id': 1})))
-    print prev_case_list
+    #print prev_case_list
     taken_list = list(set(prev_case_list) - set(current_case_list))
     for _id in taken_list:
         p.update({'_id': _id}, {'$set': {'has_owner': True, 'nno': False, 'mute': False}})
@@ -327,7 +327,7 @@ def ncq_parser(html_source):
     SBR_MSG = sbr_msg
     p.update({'_id': 200}, {'$set': {'content': SBR_MSG}})
 
-    print "SBR_MSG in backend.py   " + SBR_MSG
+    #print "SBR_MSG in backend.py   " + SBR_MSG
     #self._say(self.settings['channels'][0],sbr_msg)
 
 def get_sbr():
@@ -358,9 +358,9 @@ class Backend(object):
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         #In order to reuse the socket immediately after backend shutdown and restart
         server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-	print "Binding"
+	#print "Binding"
         server.bind(("127.0.0.1", 5050))
-        print "Binded"
+        #print "Binded"
 
         server.listen(1)
 
@@ -417,7 +417,7 @@ class Backend(object):
             gevent.spawn(self.server),
             gevent.spawn(self.report_thread),
         ]
-        print "Joining"
+        #print "Joining"
 
         gevent.joinall(jobs)
 
