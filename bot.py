@@ -183,7 +183,7 @@ class Bot(object):
                             #msg_str += ' ' + sev_str.ljust(4)
                             #msg_str += ' ' + case['url'].ljust(40)
                             #msg_str += ' ' + 'True'
-                            msg_str = "%s: [%s%s%s] %s%s%s [%s %s] %s%s%s NNO:%s %s" % (
+                            msg_str = "%s: #[%s%s%s] %s%s%s [%s %s] %s%s%s NNO:%s" % (
                                 msg_prefix,
                                 BOLD, case['_id'], CLEAR,
                                 BLUE, case['subject'], CLEAR,
@@ -191,17 +191,17 @@ class Bot(object):
                                 sev_str,
                                 BLUE, case['status'], CLEAR,
                                 case['nno'],
-                                case['url'],
+                             #   case['url'],
                             )
                         else:
-                            msg_str = "%s: [%s%s%s] %s%s%s [%s %s] %s%s%s %s" % (
+                            msg_str = "%s: #[%s%s%s] %s%s%s [%s %s] %s%s%s" % (
                                 msg_prefix,
                                 BOLD, case['_id'], CLEAR,
                                 BLUE, case['subject'], CLEAR,
                                 sbt_str,
                                 sev_str,
                                 BLUE, case['status'], CLEAR,
-                                case['url'],
+                            #    case['url'],
                             )
 
                         if onduty:
@@ -213,14 +213,14 @@ class Bot(object):
 
 			if onduty and case['region'] == 'KR':
 
-				msg_str = "%s: [%s%s%s] %s%s%s [%s %s] %s%s%s %s" % (
+				msg_str = "%s: #[%s%s%s] %s%s%s [%s %s] %s%s%s" % (
                                 msg_prefix,
                                 BOLD, case['_id'], CLEAR,
                                 BLUE, case['subject'], CLEAR,
                                 sbt_str,
                                 sev_str,
                                 BLUE, case['status'], CLEAR,
-                                case['url'],
+                                #case['url'],
                             )
 
 				self._say(self.settings['channels'][1],msg_str)
